@@ -1,0 +1,13 @@
+// _reset.scss
+
+/* Reseteo de márgenes, padding, estilo de listas, y enlaces */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // Asegura que el padding y el border se incluyan en el tamaño del elemento
+  text-decoration: none;  // Elimina subrayados de enlaces
+  list-style: none;      // Elimina puntos y números en listas
+}

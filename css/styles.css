@@ -113,6 +113,23 @@ body { /* utilizamos flexbox para alinear el contenido del body tanto horizontal
     color: #7B92A2;
 }
 
+/* Carrito de compras */
+
+.cart-icon-container {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-icon-container a span {
+    left: 25px;
+    margin: 4px;
+    padding: 5px;
+}
+
+/* Estilo menú */
+
 #menu {
     display: none;
 }
@@ -272,6 +289,11 @@ body { /* utilizamos flexbox para alinear el contenido del body tanto horizontal
 
 
 /* estilos para el main - apartado nuevos ingresos */
+
+.new-arrival-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 .img-uno-new-arrival {
     width: 70%;
