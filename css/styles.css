@@ -1,0 +1,507 @@
+/* Reset de CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Selector + propiedad + valor 
+
+    selector{
+        propiedad: valor;
+    }
+
+*/
+
+/* comienzo - aplicar estilos por etiqueta - selectores directamente a los elementos, es decir, utilizamos la etiqueta para aplicar estilos */
+
+/* aplicar estilos para el body */
+
+body { /* utilizamos flexbox para alinear el contenido del body tanto horizontal como verticalmente */
+   font-family: "Bebas Neue", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   min-height: 100vh;
+}
+
+/* comienzo - aplicar estilos por atributo CLASS */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/img-bg-index.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* estilos del icono del carrito en index.html */
+
+.cart-icon-container {
+    position: relative;
+    display: block;
+}
+
+#cart-icon {
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+#cart-count {
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 70%;
+    padding: 4px;
+    font-size: 1rem;
+}
+
+/* estilos del carrito en cart.html */
+
+.cart-items {
+    margin: 20px;
+}
+
+.cart-items ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-items li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* estilos menu */
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 25px;
+    padding: 20px;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 700;
+}
+
+.menu .navbar ul li a:hover {
+    color: #7B92A2;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 30px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 75px;
+    line-height: 80px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.header-content p {
+    font-size: 29px;
+    color: #FFFFFF;
+    padding: 0 250px;
+    margin-bottom: 40px;
+}
+
+
+
+.cart-icon-container span i a {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.footprints {
+    padding: 100px 0;
+    background-color: #F6F6F6;
+    position: relative;
+}
+
+/* estilos del apartado de destacados */
+
+.destacados {
+    display: grid; /* la clase .destacados utiliza CSS Grid para organizar los productos en un número variable de columnas */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* utilización de grid, esto permite que las tarjetas de productos se ajusten a diferentes tamaños de pantalla */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* estilo del texto apartado destacados */
+
+.titulo-destacados {
+   font-size: 2rem;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+/* estilos de cada producto */
+
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* título del producto */
+
+.producto h3 {
+    font-size: 1.80rem;
+    margin: 15px 0;
+}
+
+/* precio del producto */
+
+.producto .precio {
+    font-size: 1.55rem;
+    padding: 10px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* botón de compra */
+
+.producto .comprar {
+    background-color: #487292;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.20rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.producto .comprar:hover {
+    background-color: #1c71aa;
+}
+
+/* efecto al pasar el ratón sobre un producto */
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* estilo al main para el formulario de contacto */
+
+.nombre-formulario {
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+.email-formulario {
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+.mensaje-formulario {
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+/* estilos para el main - apartado carrito */
+
+
+
+/* estilos para el main - apartado inicio */
+
+.img-inicio {
+    width: 80%;
+
+}
+
+.img-inicio img {
+    width: 712px;
+    padding: 10px 10px;
+}
+
+/* estilos para el main - apartado nosotros */
+
+
+
+/* estilos para el main - apartado nuevos ingresos */
+
+.img-uno-new-arrival {
+    width: 70%;
+}
+
+.img-uno-new-arrival img {
+    width: 700px;
+    padding: 10px 10px 10px;
+}
+
+.img-dos-new-arrival {
+    width: 70%;
+}
+
+.img-dos-new-arrival img {
+    width: 700px;
+    padding: 10px 10px 10px;
+}
+
+.img-tres-new-arrival {
+    width: 70%;
+}
+
+.img-tres-new-arrival img {
+    width: 700px;
+    padding: 10px 10px 10px;
+}
+
+/* estilos para el main - apartado tienda */
+
+
+
+/* estilo del pie de página */
+
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-content { /* utilización de grid */
+    display: grid;
+    grid-template-columns: 1fr; /* un solo bloque (columna) */
+    align-items: center;
+    justify-items: center; /* centra los div horizontalmente */
+}
+
+/* ruta de especificidad social media/info/you */
+
+.reset-store-social-media {
+    margin: 20px;
+    padding: 10px;
+
+}
+
+.reset-store-info {
+    margin: 20px;
+    padding: 10px;
+
+}
+
+.reset-store-you {
+    margin: 20px;
+    padding: 10px;
+
+}
+
+/* ruta de especificidad you h3/social media h3 */
+
+.reset-store-you h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.reset-store-info h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* ruta de especificidad you ul/info ul/social media ul */
+
+.reset-store-you ul {
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+.reset-store-info ul {
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+.reset-store-social-media ul {
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+/* ruta de especificidad social media ul li/info ul li/you ul li */
+
+.reset-store-social-media ul li {
+    margin: 10px 0;
+}
+
+.reset-store-info ul li {
+    margin: 10px 0;
+}
+
+.reset-store-you ul li {
+    margin: 10px 0;
+}
+
+/* ruta social media ul li a/info ul li a/you ul li a */
+
+.reset-store-social-media ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.reset-store-info ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.reset-store-you ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+/* ruta you ul li a:hover/info ul li a:hover/social media ul li a:hover */
+
+.reset-store-you ul li a:hover {
+    color: #7B92A2;
+}
+
+.reset-store-info ul li a:hover {
+    color: #7B92A2;
+}
+
+.reset-store-social-media ul li a:hover {
+    color: #7B92A2;
+}
+
+/* ruta de especificidad social media a */
+
+.reset-store-social-media a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+/* ruta de especificidad social media a:hover */
+
+.reset-store-social-media a:hover {
+    color: #7B92A2;
+}
+
+/* ruta de especificidad copyright */
+
+.reset-store-copyright {
+    margin: 20px;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+/* ruta de especificidad copyright p */
+
+.reset-store-copyright p {
+    color: #c7bdbd;
+}
+
+/* media query para pantallas grandes, min-width: 768px */
+
+@media (min-width: 768px) { /* utilizamos flexbox para organizar las secciones en una columna, pero para pantallas grandes (min-width: 768px), las organizamos en una fila horizontal. */
+   
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* sección you/social media/info */
+
+    .reset-store-you {
+        margin-bottom: 0;
+    }
+
+    .reset-store-social-media {
+        margin-bottom: 0;
+    } 
+
+    .reset-store-info {
+        margin-bottom: 0;
+    }
+
+    /* sección you ul/social media ul/info ul */
+
+    .reset-store-you ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .reset-store-info ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .reset-store-social-media ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    /* sección you a/info a/social media a */
+
+    .reset-store-you a {
+        font-size: 1.2rem;
+    }
+
+    .reset-store-info a {
+        font-size: 1.2rem;
+    }
+
+    .reset-store-social-media a {
+        font-size: 1.2rem;
+    } 
+}
