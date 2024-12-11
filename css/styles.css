@@ -126,6 +126,7 @@ body { /* utilizamos flexbox para alinear el contenido del body tanto horizontal
     left: 25px;
     margin: 4px;
     padding: 5px;
+    border-radius: 5px 5px 5px 5px;
 }
 
 /* Estilo menú */
@@ -164,13 +165,6 @@ body { /* utilizamos flexbox para alinear el contenido del body tanto horizontal
 .cart-icon-container span i a {
     position: relative;
     display: flex;
-    align-items: center;
-}
-
-/* estilos para el main de inicio/index */
-
-.texto-bienvenida {
-    justify-content: center;
     align-items: center;
 }
 
@@ -267,49 +261,164 @@ body { /* utilizamos flexbox para alinear el contenido del body tanto horizontal
     font-size: 40px;
 }
 
+.text-area-nombre {
+    align-items: center;
+}
+
 /* estilos para el main - apartado carrito */
+
+
+
+/* CARRITO */
+
 
 
 
 /* estilos para el main - apartado inicio */
 
-.img-inicio {
-    width: 80%;
-
+main .titulo-inicio {
+    font-size: 55px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
 }
 
-.img-inicio img {
-    width: 712px;
-    padding: 10px 10px;
+main .texto {
+    font-size: 35px;
+    margin: 10px 10px;
+    padding: 30px;
+    text-align: center;
 }
+
+main .subtitulo-inicio {
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* estilos para la línea divisoria del index */
+
+.linea {
+    width: 50%; /* el width define el tamaño de la línea (50% del contenedor padre) */
+    height: 2px; /* grosor de la línea */
+    background-color: #BEC0BF; /* color de la línea */
+    margin: 20px auto; /* el margin centra la línea y añade espacio arriba y abajo */
+  }
 
 /* estilos para el main - apartado nosotros */
 
+.nosotros-content-uno {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 30px;
+    display: block;
+}
 
+.nosotros-content-dos {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 30px;
+    display: block;
+}
 
 /* estilos para el main - apartado nuevos ingresos */
 
 .new-arrival-container {
     display: grid;
-    grid-template-rows: auto 1fr; /* La primera fila para el texto, la segunda para la imagen */
-    justify-items: center; /* Centramos el contenido horizontalmente */
-    row-gap: 20px; /* Le añade espacio entre el texto y la imagen */
+    grid-template-rows: auto 1fr; /* la primera fila para el texto, la segunda para la imagen */
+    justify-items: center; /* centramos el contenido horizontalmente */
+    row-gap: 20px; /* le añade espacio entre el texto y la imagen */
 }
 
 .txt-new-arrival {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .img-new-arrival-general {
-    width: 100%; /* Ajusta el tamaño de la imagen */
-    max-width: 500px; /* Limita el tamaño máximo de la imagen */
-    margin-top: 20px; /* Añade un margen para separar la imagen del texto */
+    width: 100%; /* el width ajusta el tamaño de la imagen */
+    max-width: 500px; /* limita el tamaño máximo de la imagen */
+    margin-top: 20px; /* añade un margen para separar la imagen del texto */
 }
 
-/* estilos para el main - apartado tienda */
+.titulo-nuevos-ingresos {
+    font-size: 45px;
+    margin: 30px;
+}
 
+.header-content .subtitulo-nuevos-ingresos {
+    color: #FFFFFF;
+    font-size: 35px;
+}
 
+/* estilos del apartado de tienda/catálogo */
+
+.catalogo {
+    display: grid; /* la clase .destacados utiliza CSS Grid para organizar los productos en un número variable de columnas */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* utilización de grid, esto permite que las tarjetas de productos se ajusten a diferentes tamaños de pantalla */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* estilos de cada producto - catálogo */
+
+.producto-catalogo {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.producto-catalogo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* título del producto - catálogo */
+
+.producto-catalogo h3 {
+    font-size: 1.80rem;
+    margin: 15px 0;
+}
+
+/* precio del producto - catálogo */
+
+.producto-catalogo .precio-catalogo {
+    font-size: 1.55rem;
+    padding: 10px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* botón de compra - catálogo */
+
+.producto-catalogo .comprar {
+    background-color: #487292;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 1.20rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.producto-catalogo .comprar:hover {
+    background-color: #1c71aa;
+}
+
+/* efecto al pasar el ratón sobre un producto - catálogo */
+
+.producto-catalogo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 
 /* estilo del pie de página */
 
@@ -456,6 +565,73 @@ body { /* utilizamos flexbox para alinear el contenido del body tanto horizontal
 
 .reset-store-copyright p {
     color: #c7bdbd;
+}
+
+/* media query para pantallas chicas (mobile), max-width: 991px */
+
+@media(max-width:991px) {
+
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #bdc0c2;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 200px 40px;
+    }
+
+    .header-content p {
+        padding: 0;
+    }
+
+    .header-content span {
+        display: none;
+    }
+
+    .span-nosotros {
+        display: none;
+    }
+
+    .nosotros-content-uno {
+        padding: 200px 40px;
+    }
+
+    .nosotros-content-uno p {
+        padding: 0;
+    }
+
+    .nosotros-content-dos {
+        display: none;
+    }
+
+    .subtitulo-nuevos-ingresos {
+        display: none;
+    }
+
 }
 
 /* media query para pantallas grandes, min-width: 768px */

@@ -160,7 +160,7 @@
       margin-bottom: 20px;
   }
   
-  /* Estilos de cada producto */
+  /* Estilos de cada producto */  
 
   .producto {
       background-color: white;
@@ -170,6 +170,8 @@
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       width: 100%;
+
+      @include hover-effect(translateY(-10px), 0 10px 20px rgba(0, 0, 0, 0.25)); /* mixin para efectos de hover (transición) */
   
       &:hover {
           transform: translateY(-5px);
@@ -321,27 +323,125 @@
           }
       }
   }
+
+  /* media query para pantallas chicas (mobile), max-width: 991px */
+
+@media(max-width:991px) {
+
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #bdc0c2;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 200px 40px;
+    }
+
+    .header-content p {
+        padding: 0;
+    }
+
+    .header-content span {
+        display: none;
+    }
+
+    .span-nosotros {
+        display: none;
+    }
+
+    .nosotros-content-uno {
+        padding: 200px 40px;
+    }
+
+    .nosotros-content-uno p {
+        padding: 0;
+    }
+
+    .nosotros-content-dos {
+        display: none;
+    }
+
+    .subtitulo-nuevos-ingresos {
+        display: none;
+    }
+
+}
   
-  /* Media query para pantallas grandes */
-  
-  @media (min-width: 768px) {
-      .reset-store-you,
-      .reset-store-social-media,
-      .reset-store-info {
-          margin-bottom: 0;
-      }
-  
-      .reset-store-you ul,
-      .reset-store-info ul,
-      .reset-store-social-media ul {
-          display: flex;
-          gap: 20px;
-      }
-  
-      .reset-store-you a,
-      .reset-store-info a,
-      .reset-store-social-media a {
-          font-size: 1.2rem;
-      }
-  }
-  
+  /* media query para pantallas grandes, min-width: 768px */
+
+@media (min-width: 768px) { /* utilizamos flexbox para organizar las secciones en una columna, pero para pantallas grandes (min-width: 768px), las organizamos en una fila horizontal. */
+   
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* sección you/social media/info */
+
+    .reset-store-you {
+        margin-bottom: 0;
+    }
+
+    .reset-store-social-media {
+        margin-bottom: 0;
+    } 
+
+    .reset-store-info {
+        margin-bottom: 0;
+    }
+
+    /* sección you ul/social media ul/info ul */
+
+    .reset-store-you ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .reset-store-info ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .reset-store-social-media ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    /* sección you a/info a/social media a */
+
+    .reset-store-you a {
+        font-size: 1.2rem;
+    }
+
+    .reset-store-info a {
+        font-size: 1.2rem;
+    }
+
+    .reset-store-social-media a {
+        font-size: 1.2rem;
+    } 
+}
